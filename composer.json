@@ -1,1 +1,13 @@
-
+{
+    "name": "ALFRED",
+    "authors": [
+        {
+            "name": "Akin Akin",
+            "email": "akinsource@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    }
+}
