@@ -29,6 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $reply = "Yes. How may I be of assistance?";
 		echo json_encode($reply);
 		return;
+	} elseif (strtolower($name) == 'time'){
+        $reply = date("F d, Y h:i:s A");
+		echo json_encode($reply);
+		return;
 	} elseif (stripos($name, 'countdown') === 0 ) {
 		 $dater = substr(strstr($name," "), 1);
 		require "answers.php";
