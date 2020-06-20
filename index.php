@@ -233,7 +233,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		var inputw = $("#add").val();
 		$( "#view" ).append('<p class = "chat1">'+inputw+'</p>');
-		$.post("profiles/akinsource.php",
+		$.post("index.php",
 			{inputw:inputw},
 			function(response, status){
 				//alert(response);
