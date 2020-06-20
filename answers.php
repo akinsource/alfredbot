@@ -1,3 +1,4 @@
+<?php
 function count_akin($poin){
 date_default_timezone_set("Africa/Lagos");
 $date_req = strtotime($poin);
@@ -27,3 +28,4 @@ if ($weeks_remaining >= 1) {
 }
 return $cdown;
 }
+?>
