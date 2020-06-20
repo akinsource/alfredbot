@@ -1,3 +1,20 @@
+<?php 
+	if(!defined('DB_USER')){
+	require "config.php";
+	try {
+		$conn = new PDO("mysql:host=". DB_HOST. ";dbname=". DB_DATABASE , DB_USER, DB_PASSWORD);
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		} catch (PDOException $e) {
+			die("<br><br><br>Could not connect to the database " . DB_DATABASE . ": " . $e->getMessage());
+		}
+	$result = $conn->query("Select * from secret_word LIMIT 1");
+	$result = $result->fetch(PDO::FETCH_OBJ);
+	$secret_word = $result->secret_word;
+
+   	$result2 = $conn->query("Select * from botx_data where username = 'warcode'");
+   	$user = $result2->fetch(PDO::FETCH_OBJ);
+}
+?>
 <?php
 
 	function tryout($str,$dbcon) {
