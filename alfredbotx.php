@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 		echo json_encode($reply);
 		return;
 	} elseif (strtolower($name) === 'aboutbot'){
-        $reply = "Alfred version 1.0";
+        $reply = "Alfred version 2.0";
 		echo json_encode($reply);
 		return;	
 	} elseif (strtolower($name) == 'alfred'){
