@@ -12,7 +12,7 @@
 		return $data;
 	}
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-			require "answers.php";
+			//require "answers.php";
 			$name = test_input($_POST["inputw"]);
 		
 	// collect value of input field
@@ -31,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 		return;
 	} elseif (stripos($name, 'countdown') === 0 ) {
 		 $dater = substr(strstr($name," "), 1);
+		require "answers.php";
 		echo json_encode(count_akin($dater));
 		return;
     } elseif (stripos($name, "Train")===0 && count(explode('#',$name))==4) {
