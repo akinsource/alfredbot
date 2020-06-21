@@ -8,7 +8,7 @@
 			die("<br>Could not connect to the database " . DB_DATABASE . ": " . $e->getMessage());
 		}
 		global $conn;
-		$conn->query("Create Chatbot(Question varchar(255), Answer varchar(255));
+		$conn->query("Create Table Chatbot(Question varchar(255), Answer varchar(255));
 }
 ?>
 <?php
