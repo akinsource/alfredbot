@@ -174,7 +174,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </style>
 <body style="padding:0; margin:0;">
 <script>
-function showHint(str) {//display training hint
+/*function showHint(str) {//display training hint
 	if (str.length == 0) { 
         document.getElementById("ask").innerHTML = "";
         return;
@@ -182,7 +182,7 @@ function showHint(str) {//display training hint
         document.getElementById("ask").innerHTML = "Hint: To train me <b>'Train # Question # Answer # Password'</b>";
 
     }
-}
+}*/
 function placeHolder() {//display Ask me questions in textBox
   document.getElementById("add").placeholder = "";
 }
