@@ -41,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 		echo json_encode($reply);
 		return;
 	} elseif (strtolower($name) == 'time'){
+	  date_default_timezone_set('Africa/Lagos');
         $reply = date("F d, Y h:i:s A");
 		echo json_encode($reply);
 		return;
