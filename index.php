@@ -72,12 +72,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 		$reply = "You have entered an invalid command";
 		echo json_encode($reply);
 		return;
-	} elseif (tryout($name, $conn)) {										
+	/*} elseif (tryout($name, $conn)) {										
         $ans = $conn->query("Select answer from chatbot where question = '$name'");
 		$ans = $ans->fetch(PDO::FETCH_OBJ);
 		$reply = tryout($name, $conn)->answer;
 		echo json_encode($reply);
-		return;
+		return;*/
 	} else {	
 		$reply = "It appears I do not know the answer!";
 		echo json_encode($reply);
