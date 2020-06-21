@@ -1,6 +1,7 @@
 <?php 
 	if(!defined('DB_USER')){
-	require "config.php";
+		require "config.php";
+	}
 	try {
 		$conn = new PDO("mysql:host=". DB_HOST. ";dbname=". DB_DATABASE , DB_USER, DB_PORT, DB_PASSWORD);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -8,11 +9,8 @@
 			die("<br>Could not connect to the database " . DB_DATABASE . ": " . $e->getMessage());
 		}
 		global $conn;
-		$conn->query("Create Table Chatbot(Question varchar(255), Answer varchar(255));
-}
-?>
-<?php
-
+		//$conn->query("Create Table Chatbot(Question varchar(255), Answer varchar(255));
+		
 	function tryout($str,$dbcon) {
 		$tryout = $dbcon->query("Select * from chatbot where question='$str'");
 		$tryout = $tryout->fetch(PDO::FETCH_OBJ);
