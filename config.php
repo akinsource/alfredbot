@@ -7,3 +7,4 @@ define ('DB_PASSWORD', "50d34ccc7baa6da65898c574bb3689dd8009a5a51c166a13348c0261
 define ('DB_DATABASE', "d9oiidgf8b8591");
 define ('DB_HOST', "ec2-3-216-129-140.compute-1.amazonaws.com");
 define ('DB_PORT', "5432");
+?>
